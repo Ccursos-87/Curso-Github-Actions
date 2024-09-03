@@ -1,13 +1,15 @@
 name: Hola Mundo
-on:
-  push:
-    branches: [main]
-jobs: Primer Workflow
-  runs-on: ubuntu-latest
-  steps:
-  - name: Clon Repository
-    uses: actions/checkout@v4
-  - name: Install Node
-    uses: actions/setup-nodenv@v3
-  - name: Run Code
-    run: node hola_mundo.js
+
+on: push
+
+jobs:
+  first_job:
+    name: My first workflow
+      runs-on: ubuntu-latest
+      steps:
+        - name: Clon Repository
+          uses: actions/checkout@v4
+        - name: Install Node
+          uses: actions/setup-nodenv@v3
+        - name: Run Code
+          run: node hola_mundo.js
