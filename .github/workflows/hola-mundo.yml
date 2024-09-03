@@ -13,4 +13,4 @@ jobs:
       - name: Install dependencies
         run: npm i
       - name: Run Code
-        run: node hola_mundo.js 
+        run: node hola-mundo.js 
