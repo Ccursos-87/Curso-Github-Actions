@@ -2,10 +2,13 @@ name: Hola Mundo
 
 on: push
 
-jobs:
-      runs-on: ubuntu-latest
-      steps:
-          uses: actions/checkout@v4
-          uses: actions/setup-nodenv@v3
-        - name: Run Code
-          run: node hola_mundo.js
+jobs: 
+  First-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      uses: actions/checkout@v4
+      uses: actions/setup-nodenv@v3
+      - name: Install dependencies
+        run: npm i
+      - name: Run Code
+        run: node hola_mundo.js 
