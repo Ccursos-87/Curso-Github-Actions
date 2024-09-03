@@ -1,6 +1,6 @@
 name: Hola Mundo
 
-on: push
+on: [push]
 
 jobs: 
   First-workflow:
@@ -8,6 +8,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-nodenv@v4
+        with:
+          node-version: 18
       - name: Install dependencies
         run: npm i
       - name: Run Code
