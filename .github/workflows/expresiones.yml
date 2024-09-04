@@ -4,11 +4,11 @@ on:
     inputs:
       edad:
         descripcion: 'Edad'
-        required: 'true'
+        required: true
         type: integer
       nombre:
         descripcion: 'Tu nombre'
-        required: 'true'
+        required: true
         default: 'Juan'
         type: string
 jobs:
