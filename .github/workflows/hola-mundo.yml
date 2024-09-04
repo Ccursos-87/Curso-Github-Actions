@@ -5,6 +5,8 @@ on:
     branches:
       - 'main'
       - 'first-branch'
+  pull_request:
+    type: [opened]
   merge_group:
     type: [checks_requested]
 jobs: 
