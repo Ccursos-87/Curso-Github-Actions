@@ -1,13 +1,22 @@
 name: Hola Mundo
-on:
+
+on: 
   push:
-    branches: [main]
-jobs: Primer Workflow
-  runs-on: ubuntu-latest
-  steps:
-  - name: Clon Repository
-    uses: actions/checkout@v4
-  - name: Install Node
-    uses: actions/setup-nodenv@v3
-  - name: Run Code
-    run: node hola_mundo.js
+    branches:
+      - 'main'
+      - 'first-branch'
+  merge_group:
+    type: [checks_requested]
+jobs: 
+  First-workflow:
+    name: Hola Mundo
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: npm i
+      - name: Run Code
+        run: node hola-mundo.js 
