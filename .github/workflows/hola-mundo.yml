@@ -1,6 +1,9 @@
 name: Hola Mundo
 
-on: push
+on: 
+  push
+  merge-group:
+    type: [checks_requested]
 jobs: 
   First-workflow:
     name: Hola Mundo
