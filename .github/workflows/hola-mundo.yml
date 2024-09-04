@@ -1,7 +1,7 @@
 name: Hola Mundo
 
 on: 
-  push
+  push:
   merge-group:
     type: [checks_requested]
 jobs: 
