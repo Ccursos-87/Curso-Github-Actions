@@ -5,7 +5,7 @@ on:
     branches:
       -'main'
       -'first-branch'
-  merge-group:
+  merge_group:
     type: [checks_requested]
 jobs: 
   First-workflow:
