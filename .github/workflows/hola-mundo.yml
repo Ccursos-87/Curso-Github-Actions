@@ -3,8 +3,8 @@ name: Hola Mundo
 on: 
   push:
     branches:
-      -'main'
-      -'first-branch'
+      - 'main'
+      - 'first-branch'
   merge_group:
     type: [checks_requested]
 jobs: 
