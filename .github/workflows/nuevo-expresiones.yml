@@ -4,23 +4,23 @@ on:
     input:
       palabra:
         descripcion: Palabra a cambiar
-        require: true
+        required: true
         type: string
       cambio1:
         descripcion: parte 1 a cambiar
-        require: false
+        required: false
         type: string
       cambio2:
         descripcion: parte 2 a cambiar
-        require: false
+        required: false
         type: string
       cambio3:
         descripcion: parte 3 a cambiar
-        require: false
+        required: false
         type: string
       cambio4:
         descripcion: parte 4 a cambiar
-        require: false
+        required: false
         type: string
 jobs:
   first:
