@@ -22,7 +22,7 @@ on:
           descripcion: parte 4 a cambiar
           require: false
           type: string
-job:
+jobs:
   first:
     if: ${{ github.input.cambio1 == '*'}}
     runs_on: ubuntu-latest
