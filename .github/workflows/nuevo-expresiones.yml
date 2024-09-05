@@ -1,49 +1,49 @@
 name: Nuevo Expresiones
 on:
   workflow_dispatch:
-      input:
-        palabra:
-          descripcion: Palabra a cambiar
-          require: true
-          type: string
-        cambio1:
-          descripcion: parte 1 a cambiar
-          require: false
-          type: string
-        cambio2:
-          descripcion: parte 2 a cambiar
-          require: false
-          type: string
-        cambio3:
-          descripcion: parte 3 a cambiar
-          require: false
-          type: string
-        cambio4:
-          descripcion: parte 4 a cambiar
-          require: false
-          type: string
+    input:
+      palabra:
+        descripcion: Palabra a cambiar
+        require: true
+        type: string
+      cambio1:
+        descripcion: parte 1 a cambiar
+        require: false
+        type: string
+      cambio2:
+        descripcion: parte 2 a cambiar
+        require: false
+        type: string
+      cambio3:
+        descripcion: parte 3 a cambiar
+        require: false
+        type: string
+      cambio4:
+        descripcion: parte 4 a cambiar
+        require: false
+        type: string
 jobs:
   first:
     if: ${{ github.input.cambio1 == '*'}}
     runs_on: ubuntu-latest
     steps:
-      name: Cambio de primer palabra
+    - name: Cambio de primer palabra
       run: format('{{github.input.palabra {0}', '{{github.input.cambio1}}')
   Second:
     if: ${{ github.input.cambio2 == '*' }}
-    name: Cambio de segunda palabra
     runs_on: ubuntu-latest
     steps:
+    - name: Cambio de segunda palabra
       run: format('{{github.input.palabra {0}', '{{github.input.cambio2}}')
   Third:
     if: ${{ github.input.cambio3 == '*' }}
     runs_on: ubuntu-latest
     steps:
-      name: Cambio de primer palabra
+    - name: Cambio de tercer palabra
       run: format('{{github.input.palabra {0}', '{{github.input.cambio3}}')
   Fourth:
     if: ${{ github.input.cambio4 == '*' }}
     runs_on: ubuntu-latest
     steps:
-      name: Cambio de primer palabra
+    - name: Cambio de cuarta palabra
       run: format('{{github.input.palabra {0}', {{github.input.cambio4}}')
