@@ -25,25 +25,25 @@ on:
 jobs:
   first:
     if: ${{ github.input.cambio1 == '*'}}
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
     - name: Cambio de primer palabra
       run: format('{{github.input.palabra {0}', '{{github.input.cambio1}}')
   Second:
     if: ${{ github.input.cambio2 == '*' }}
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
     - name: Cambio de segunda palabra
       run: format('{{github.input.palabra {0}', '{{github.input.cambio2}}')
   Third:
     if: ${{ github.input.cambio3 == '*' }}
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
     - name: Cambio de tercer palabra
       run: format('{{github.input.palabra {0}', '{{github.input.cambio3}}')
   Fourth:
     if: ${{ github.input.cambio4 == '*' }}
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
     - name: Cambio de cuarta palabra
       run: format('{{github.input.palabra {0}', {{github.input.cambio4}}')
