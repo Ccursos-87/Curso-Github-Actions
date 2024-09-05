@@ -1,7 +1,7 @@
 name: Nuevo Expresiones
 on:
   workflow_dispatch:
-    input:
+    inputs:
       palabra:
         descripcion: Palabra a cambiar
         required: true
@@ -24,26 +24,26 @@ on:
         type: string
 jobs:
   first:
-    if: ${{ github.input.cambio1 == '*'}}
+    if: ${{ github.inputs.cambio1 == '*'}}
     runs-on: ubuntu-latest
     steps:
     - name: Cambio de primer palabra
-      run: format('{{github.input.palabra {0}', '{{github.input.cambio1}}')
+      run: format('{{github.inputs.palabra {0}', '{{github.inputs.cambio1}}')
   Second:
-    if: ${{ github.input.cambio2 == '*' }}
+    if: ${{ github.inputs.cambio2 == '*' }}
     runs-on: ubuntu-latest
     steps:
     - name: Cambio de segunda palabra
-      run: format('{{github.input.palabra {0}', '{{github.input.cambio2}}')
+      run: format('{{github.inputs.palabra {0}', '{{github.inputs.cambio2}}')
   Third:
-    if: ${{ github.input.cambio3 == '*' }}
+    if: ${{ github.inputs.cambio3 == '*' }}
     runs-on: ubuntu-latest
     steps:
     - name: Cambio de tercer palabra
-      run: format('{{github.input.palabra {0}', '{{github.input.cambio3}}')
+      run: format('{{github.inputs.palabra {0}', '{{github.inputs.cambio3}}')
   Fourth:
-    if: ${{ github.input.cambio4 == '*' }}
+    if: ${{ github.inputs.cambio4 == '*' }}
     runs-on: ubuntu-latest
     steps:
     - name: Cambio de cuarta palabra
-      run: format('{{github.input.palabra {0}', {{github.input.cambio4}}')
+      run: format('{{github.inputs.palabra {0}', {{github.inputs.cambio4}}')
