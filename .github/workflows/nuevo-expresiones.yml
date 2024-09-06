@@ -28,22 +28,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Cambio de primer palabra
-      run: format('{{github.inputs.palabra {0}', '{{github.inputs.cambio1}}')
+      run: format('{{github.inputs.palabra {0}!}}', '{{github.inputs.cambio1 !}}')
   Second:
     if: ${{ github.inputs.cambio2 == '*' }}
     runs-on: ubuntu-latest
     steps:
     - name: Cambio de segunda palabra
-      run: format('{{github.inputs.palabra {0}', '{{github.inputs.cambio2}}')
+      run: format('{{github.inputs.palabra {0}!}}', '{{github.inputs.cambio2 !}}')
   Third:
     if: ${{ github.inputs.cambio3 == '*' }}
     runs-on: ubuntu-latest
     steps:
     - name: Cambio de tercer palabra
-      run: format('{{github.inputs.palabra {0}', '{{github.inputs.cambio3}}')
+      run: format('{{github.inputs.palabra {0}!}}', '{{github.inputs.cambio3 !}}')
   Fourth:
     if: ${{ github.inputs.cambio4 == '*' }}
     runs-on: ubuntu-latest
     steps:
     - name: Cambio de cuarta palabra
-      run: format('{{github.inputs.palabra {0}', {{github.inputs.cambio4}}')
+      run: format('{{github.inputs.palabra {0}!}}', '{{github.inputs.cambio4 !}}')
