@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Cambio de primer palabra
-      run: format('{{Maraton {0} {1} {2}!}}', 'Chubb', 'de 12 km', 'en el zoologico')
+      run: format('Maraton {0} {1} {2}', 'Chubb', 'de 12 km', 'en el zoologico')
   #Second:
   #  if: ${{ github.inputs.cambio2 != '' }}
   #  runs-on: ubuntu-latest
