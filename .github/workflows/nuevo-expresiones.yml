@@ -1,57 +1,55 @@
 name: Nuevo Expresiones
 on:
   workflow_dispatch:
-    inputs:
-      palabra:
-        descripcion: Palabra a cambiar
-        required: true
-        type: string
-      cambio1:
-        descripcion: parte 1 a cambiar
-        required: false
-        type: string
-      cambio2:
-        descripcion: parte 2 a cambiar
-        required: false
-        type: string
-      cambio3:
-        descripcion: parte 3 a cambiar
-        required: false
-        type: string
-      cambio4:
-        descripcion: parte 4 a cambiar
-        required: false
-        type: string
+    #inputs:
+    #  palabra:
+    #    descripcion: Palabra a cambiar
+    #    required: true
+    #    type: string
+    #  cambio1:
+    #    descripcion: parte 1 a cambiar
+    #    required: false
+    #    type: string
+    #  cambio2:
+    #    descripcion: parte 2 a cambiar
+    #    required: false
+    #    type: string
+    #  cambio3:
+    #    descripcion: parte 3 a cambiar
+    #    required: false
+    #    type: string
+    #  cambio4:
+    #    descripcion: parte 4 a cambiar
+    #    required: false
+    #    type: string
 jobs:
   first:
-    if: ${{ github.inputs.cambio1 != ''}}
+    #if: ${{ github.inputs.cambio1 != ''}}
     runs-on: ubuntu-latest
     steps:
     - name: Cambio de primer palabra
-      run: |
-        format('{{github.inputs.palabra {0}!}}', '{{github.inputs.cambio1 !}}')
-        echo format
-  Second:
-    if: ${{ github.inputs.cambio2 != '' }}
-    runs-on: ubuntu-latest
-    steps:
-    - name: Cambio de segunda palabra
-      run: |
-        format('{{github.inputs.palabra {0}!}}', '{{github.inputs.cambio2 !}}')
-        echo format
-  Third:
-    if: ${{ github.inputs.cambio3 != '' }}
-    runs-on: ubuntu-latest
-    steps:
-    - name: Cambio de tercer palabra
-      run: |
-        format('{{github.inputs.palabra {0}!}}', '{{github.inputs.cambio3 !}}')
-        echo format
-  Fourth:
-    if: ${{ github.inputs.cambio4 != '' }}
-    runs-on: ubuntu-latest
-    steps:
-    - name: Cambio de cuarta palabra
-      run: |
-        format('{{github.inputs.palabra {0}!}}', '{{github.inputs.cambio4 !}}')
-        echo format
+      run: format('{{Maraton {0} {1} {2}!}}', 'Chubb', 'de 12 km', 'en el zoologico')
+  #Second:
+  #  if: ${{ github.inputs.cambio2 != '' }}
+  #  runs-on: ubuntu-latest
+  #  steps:
+  #  - name: Cambio de segunda palabra
+  #    run: |
+  #      format('{{github.inputs.palabra {0}!}}', '{{github.inputs.cambio2 !}}')
+  #      echo format
+  #Third:
+  #  if: ${{ github.inputs.cambio3 != '' }}
+  #  runs-on: ubuntu-latest
+  #  steps:
+  #  - name: Cambio de tercer palabra
+  #    run: |
+  #      format('{{github.inputs.palabra {0}!}}', '{{github.inputs.cambio3 !}}')
+  #      echo format
+  #Fourth:
+  #  if: ${{ github.inputs.cambio4 != '' }}
+  #  runs-on: ubuntu-latest
+  #  steps:
+  #  - name: Cambio de cuarta palabra
+  #    run: |
+  #      format('{{github.inputs.palabra {0}!}}', '{{github.inputs.cambio4 !}}')
+  #      echo format
