@@ -1,0 +1,19 @@
+name: Jobs dependientes
+run-name: Jobs despendiente uno de otro
+on:
+  workflow_dispatch:
+jobs:
+  primer_job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Este job es el que corre primero"
+  segundo_job:
+    needs: primer_job
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Este job necesita que termine primer_job para que se pueda ejecutar"
+  tercer_job:
+    needs: segundo_job
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Este job es el ultimo que se ejecuta, que que tenemos una dependencia de que corra el primero y despues el segundo"
