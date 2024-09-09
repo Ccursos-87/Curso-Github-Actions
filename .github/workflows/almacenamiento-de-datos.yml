@@ -1,0 +1,10 @@
+name: Almacenamiento de datos
+run-name: Guardando datos
+on: 
+  workflow_dispatch:
+jobs:
+  Guardando datos:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Utilizando un secret
+        run: ${{secret.EJEMPLO_DE_UN_SECRET}}
