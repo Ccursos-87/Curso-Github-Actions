@@ -8,5 +8,5 @@ jobs:
     steps:
       - name: Utilizando un secret
         env:
-          creando_secret: ${{ secret.EJEMPLO_DE_UN_SECRET}}
+          creando_secret: ${{ secrets.EJEMPLO_DE_UN_SECRET}}
         run: example-comand "$creando_secret"
