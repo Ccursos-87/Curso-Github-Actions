@@ -7,6 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Utilizando un secret
-        run: example-comand "$creando_secret"
         env:
           creando_secret: ${{ secret.EJEMPLO_DE_UN_SECRET}}
+        run: example-comand "$creando_secret"
