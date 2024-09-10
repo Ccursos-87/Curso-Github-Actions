@@ -5,11 +5,12 @@ on:
     branches:
       - main
 jobs:
-  Context-work:
+  Trabajo-De-Contexto:
     runs-on: ubuntu-latest
-    - name: Numero Aleatorio entre 0 y 1
-      id: genera_numero
-      run: echo " numero_aleatorio=$((RANDOM % 2))" >> $GITHUB_OUTPUT
-    - name: Paso o Fallo
-      run: |
-        if [[ ${{ steps.genera_numero.output.numero_aleatorio }} == 0 ]]; then exit 0; else exit 1; fi
+    steps:
+      - name: Numero Aleatorio entre 0 y 1
+        id: genera_numero
+        run: echo " numero_aleatorio=$((RANDOM % 2))" >> $GITHUB_OUTPUT
+      - name: Paso o Fallo
+        run: |
+          if [[ ${{ steps.genera_numero.output.numero_aleatorio }} == 0 ]]; then exit 0; else exit 1; fi
