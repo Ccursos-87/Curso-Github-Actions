@@ -14,4 +14,4 @@ jobs:
       - name: Paso o Fallo
         run: |
           source $GITHUB_ENV
-          if [[ ${{ steps.genera_numero.output.numero_aleatorio }} == 0 ]]; then exit 0; else exit 1; fi
+          if [[ ${{ steps.genera_numero.outputs.numero_aleatorio }} == 0 ]]; then exit 0; else exit 1; fi
