@@ -1,0 +1,14 @@
+name: Contexto numero dos
+run-name: Este es un nuevo workflow de contextos
+on:
+  workflow_dispatch:
+jobs:
+  Nuevo-Workflow-Contextos:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Genera numero 1 o dos aleatoriamente
+        id: randomly
+        run: echo "numero_aleatorio=$(($RANDOM % 2))" >> $GITHUB_OUTPUT
+      - name: Correcto o Incorrecto
+        run: |
+          if [[ ${{ steps.randomly.outputs.numero_aleatorio }} == 0 ]]; then exit 0; else exit 1; fi
