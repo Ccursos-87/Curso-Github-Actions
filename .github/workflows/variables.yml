@@ -6,9 +6,9 @@ env:
   Learning: Github Action
 jobs:
   Variables:
-  runs-on: ubuntu-latest
-  env:
-    Next: Firebase
+    runs-on: ubuntu-latest
+    env:
+      Next: Firebase
     steps:
       - name: Agregando Variables al workflow
         run: echo "Ahorta estoy aprendiendo $Learning y despues aprendere $Next para ser un mejor $Goal"
